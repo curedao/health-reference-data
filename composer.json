@@ -1,0 +1,11 @@
+{
+  "name": "quantimodo/qm-reference-databases",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mike Sinn",
+      "email": "m@quantimodo.com"
+    }
+  ],
+  "require": {}
+}
