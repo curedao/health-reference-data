@@ -1,0 +1,5 @@
+﻿slug,biomarker_id,name,entries,description,references
+urine_test_strip,urine_analysis,Urine Test Strip,,"A urine test strip or dipstick is a basic diagnostic tool used to determine pathological changes in a patient's urine in standard urinalysis."",",https://en.wikipedia.org/wiki/Urine_test_strip
+blood_standard_panel,blood_analysis,Blood Standard Panel,,"A blood test is a laboratory analysis performed on a blood sample that is usually extracted from a vein in the arm using a hypodermic needle, or via fingerprick",https://en.wikipedia.org/wiki/Blood_test
+blood_prodrome_scan,blood_analysis,Prodrome Scan,,"A blood test is a laboratory analysis performed on a blood sample that is usually extracted from a vein in the arm using a hypodermic needle, or via fingerprick",https://en.wikipedia.org/wiki/Blood_test
+blood_maccoss_wellness,blood_analysis,MacCoss Wellness Assay,,"A blood test is a laboratory analysis performed on a blood sample that is usually extracted from a vein in the arm using a hypodermic needle, or via fingerprick",https://en.wikipedia.org/wiki/Blood_test
