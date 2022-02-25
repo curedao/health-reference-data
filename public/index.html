@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Embeddable Data Browser</title>
+		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+		<link rel="stylesheet"
+		      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<!--		<script>hljs.highlightAll();</script>-->
+	</head>
+	<body>
+		<div class="max-w-5xl px-6 py-16 mx-auto text-center">
+			<h2 class="text-3xl font-semibold text-gray-800">
+				You can embed this database in your website with the following embed code
+			</h2>
+		</div>
+		<div class="min-w-screen bg-gray-50 flex items-center justify-center bg-gray-100">
+			<div class="mx-5 lg:w-6/12 bg-gray-800 shadow-2xl rounded-lg overflow-hidden">
+				<div id="header-buttons" class="py-3 px-4 flex">
+					<div class="rounded-full w-3 h-3 bg-red-500 mr-2"></div>
+					<div class="rounded-full w-3 h-3 bg-yellow-500 mr-2"></div>
+					<div class="rounded-full w-3 h-3 bg-green-500"></div>
+				</div>
+				<div id="code-area" class="py-4 px-4 mt-1 text-white text-xl">
+
+
+					<div class="mb-2">
+													<pre><code class="language-html">
+&ltiframe
+class="nc-embed"
+src="https://nocodb-docker.nhnjnfeqj105u.us-east-1.cs.amazonlightsail.com/dashboard/#/nc/base/f0e4c273-b0e0-4f28-aba4-11868b090c0b?embed"
+frameborder="0"
+width="100%"
+height="700"
+style="background: transparent; border: 1px solid #ddd"&gt;
+&lt/iframe&gt;
+		</code></pre>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="max-w-5xl px-6 py-16 mx-auto text-center">
+			<h2 class="text-3xl font-semibold text-gray-800">
+				Producing
+			</h2>
+		</div>
+		<div>
+			<iframe
+					class="nc-embed"
+					src="https://nocodb-docker.nhnjnfeqj105u.us-east-1.cs.amazonlightsail.com/dashboard/#/nc/base/f0e4c273-b0e0-4f28-aba4-11868b090c0b?embed"
+					frameborder="0"
+					width="100%"
+					height="700"
+					style="background: transparent; border: 1px solid #ddd"></iframe>
+		</div>
+
+	</body>
+</html>
