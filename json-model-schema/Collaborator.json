@@ -1,0 +1,118 @@
+[
+    {
+        "name": "id",
+        "dbType": "integer,true,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Unique identified for the record "
+    },
+    {
+        "name": "user_id",
+        "dbType": "bigInteger,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Numeric User ID"
+    },
+    {
+        "name": "app_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "App ID. "
+    },
+    {
+        "name": "type",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Type. Individual studies are based on data of a single user. Group studies are based on data from a specific group of individuals who have joined.  Global studies are based on aggregated and anonymously shared data from all users. (type: string) "
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Collaborator was Created At. When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Collaborator was Updated At. When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "deleted_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Collaborator was Deleted At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "client_id",
+        "dbType": "string,80:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Client ID. Your QuantiModo client id can be obtained by creating an app at https:\/\/builder.quantimo.do (type: string) "
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Application,app_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,OAClient,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,WpUser,user_id"
+    }
+]

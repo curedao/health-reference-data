@@ -1,0 +1,1395 @@
+[
+    {
+        "name": "ID",
+        "dbType": "bigInteger,true,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "ID. Unique number assigned to each user. ID of the cohort study which is necessary to allow participants to join (type: string) "
+    },
+    {
+        "name": "client_id",
+        "dbType": "string,255",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Client ID. Your QuantiModo client id can be obtained by creating an app at https:\/\/builder.quantimo.do (type: string) "
+    },
+    {
+        "name": "user_login",
+        "dbType": "string,60:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "User Login. Unique username for the user. "
+    },
+    {
+        "name": "user_email",
+        "dbType": "string,100:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "User Email. Email address of the user. "
+    },
+    {
+        "name": "user_pass",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "User Pass. Hash of the user\u2019s password. "
+    },
+    {
+        "name": "user_nicename",
+        "dbType": "string,50:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "User Nicename. Display name for the user. "
+    },
+    {
+        "name": "user_url",
+        "dbType": "string,2083:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "User Url. URL of the user, e.g. website address. Ex: https:\/\/plus.google.com\/+MikeSinn (type: string) "
+    },
+    {
+        "name": "user_registered",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "User Registered. Time and date the user registered. Ex: 2013-12-03 15:25:13 UTC ISO 8601 YYYY-MM-DDThh:mm:ss (type: string) "
+    },
+    {
+        "name": "user_activation_key",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "User Activation Key. Used for resetting passwords. "
+    },
+    {
+        "name": "user_status",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "User Status. Was used in Multisite pre WordPress 3.0 to indicate a spam user. "
+    },
+    {
+        "name": "display_name",
+        "dbType": "string,250:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Display Name. Desired name to be used publicly in the site, can be user_login, user_nicename, first name or last name defined in wp_usermeta. Ex: Trader Joe's Bedtime Tea (type: string) "
+    },
+    {
+        "name": "avatar_image",
+        "dbType": "string,2083:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Avatar Image. Ex: https:\/\/lh6.googleusercontent.com\/-BHr4hyUWqZU\/AAAAAAAAAAI\/AAAAAAAIG28\/2Lv0en738II\/photo.jpg?sz=50 (type: string) "
+    },
+    {
+        "name": "reg_provider",
+        "dbType": "string,25:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Reg Provider. Registered via. "
+    },
+    {
+        "name": "provider_id",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Provider ID. Unique id from provider. "
+    },
+    {
+        "name": "provider_token",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Provider Token. Access token from provider. "
+    },
+    {
+        "name": "remember_token",
+        "dbType": "string,100:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Remember Token. Remember me token. "
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the User was Updated At. When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the User was Created At. When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "refresh_token",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Refresh Token. Refresh token from provider. See https:\/\/oauth.net\/2\/grant-types\/refresh-token\/ (type: string) "
+    },
+    {
+        "name": "unsubscribed",
+        "dbType": "boolean:nullable",
+        "htmlType": "checkbox,1",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Unsubscribed. Indicates whether the use has specified that they want no emails or any form of communication. "
+    },
+    {
+        "name": "old_user",
+        "dbType": "boolean:nullable",
+        "htmlType": "checkbox,1",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Old User. "
+    },
+    {
+        "name": "stripe_active",
+        "dbType": "boolean:nullable",
+        "htmlType": "checkbox,1",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Stripe Active. Ex: 1 (type: boolean) "
+    },
+    {
+        "name": "stripe_id",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Stripe ID. Ex: cus_A8CEmcvl8jwLhV (type: string) "
+    },
+    {
+        "name": "stripe_subscription",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Stripe Subscription. Ex: sub_ANTx3nOE7nzjQf (type: string) "
+    },
+    {
+        "name": "stripe_plan",
+        "dbType": "string,100:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Stripe Plan. Ex: monthly7 (type: string) "
+    },
+    {
+        "name": "last_four",
+        "dbType": "string,4:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Last Four. Ex: 2009 (type: string) "
+    },
+    {
+        "name": "trial_ends_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the User was Trial Ends At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "subscription_ends_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the User was Subscription Ends At. UTC ISO 8601 YYYY-MM-DDThh:mm:ss (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "roles",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Roles. An array containing all roles possessed by the user.  This indicates whether the use has roles such as administrator, developer, patient, student, researcher or physician. Ex: [\"admin\"] (type: string) "
+    },
+    {
+        "name": "time_zone_offset",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time Zone Offset. The time-zone offset is the difference, in minutes, between UTC and local time. Note that this means that the offset is positive if the local timezone is behind UTC (i.e. UTC\u221206:00 Central) and negative if it is ahead. Ex: 300 (type: integer) "
+    },
+    {
+        "name": "deleted_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the User was Deleted At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "earliest_reminder_time",
+        "dbType": "time",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Earliest Reminder Time. Earliest time of day at which reminders should appear in HH:MM:SS format in user timezone. Earliest time user should get notifications. Ex: 05:00:00 (type: string) "
+    },
+    {
+        "name": "latest_reminder_time",
+        "dbType": "time",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Latest Reminder Time. Latest time of day at which reminders should appear in HH:MM:SS format in user timezone. Latest time user should get notifications. Ex: 23:00:00 (type: string) "
+    },
+    {
+        "name": "push_notifications_enabled",
+        "dbType": "boolean:nullable",
+        "htmlType": "checkbox,1",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Push Notifications Enabled. Should we send the user push notifications?. Ex: 1 (type: boolean) "
+    },
+    {
+        "name": "track_location",
+        "dbType": "boolean:nullable",
+        "htmlType": "checkbox,1",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Track Location. Set to true if the user wants to track their location. Ex: 1 (type: boolean) "
+    },
+    {
+        "name": "combine_notifications",
+        "dbType": "boolean",
+        "htmlType": "checkbox,1",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Combine Notifications. Should we combine push notifications or send one for each tracking reminder notification?. Ex: 1 (type: boolean) "
+    },
+    {
+        "name": "send_reminder_notification_emails",
+        "dbType": "boolean",
+        "htmlType": "checkbox,1",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Send Reminder Notification Emails. Should we send reminder notification emails?. Ex: 1 (type: boolean) "
+    },
+    {
+        "name": "send_predictor_emails",
+        "dbType": "boolean",
+        "htmlType": "checkbox,1",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Send Predictor Emails. Should we send predictor emails?. Ex: 1 (type: boolean) "
+    },
+    {
+        "name": "get_preview_builds",
+        "dbType": "boolean",
+        "htmlType": "checkbox,1",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Get Preview Builds. Should we send preview builds of the mobile application?. Ex: false (type: boolean) "
+    },
+    {
+        "name": "subscription_provider",
+        "dbType": "string:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Subscription Provider. Ex: google (type: string) "
+    },
+    {
+        "name": "last_sms_tracking_reminder_notification_id",
+        "dbType": "bigInteger,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Last Sms Tracking Reminder Notification ID. Ex: 1 (type: string) "
+    },
+    {
+        "name": "sms_notifications_enabled",
+        "dbType": "boolean",
+        "htmlType": "checkbox,1",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Sms Notifications Enabled. Should we send tracking reminder notifications via tex messages?. Ex: false (type: boolean) "
+    },
+    {
+        "name": "phone_verification_code",
+        "dbType": "string,25:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Phone Verification Code. Ex: 1234 (type: string) "
+    },
+    {
+        "name": "phone_number",
+        "dbType": "string,25:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Phone Number. Ex: 618-391-0002 (type: string) "
+    },
+    {
+        "name": "has_android_app",
+        "dbType": "boolean:nullable",
+        "htmlType": "checkbox,1",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Has Android App. Ex: false (type: boolean) "
+    },
+    {
+        "name": "has_ios_app",
+        "dbType": "boolean:nullable",
+        "htmlType": "checkbox,1",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Has Ios App. Ex: false (type: boolean) "
+    },
+    {
+        "name": "has_chrome_extension",
+        "dbType": "boolean:nullable",
+        "htmlType": "checkbox,1",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Has Chrome Extension. Ex: false (type: boolean) "
+    },
+    {
+        "name": "referrer_user_id",
+        "dbType": "bigInteger,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Referrer QuantiModo User ID. "
+    },
+    {
+        "name": "address",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Address. "
+    },
+    {
+        "name": "birthday",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Birthday. "
+    },
+    {
+        "name": "country",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Country. "
+    },
+    {
+        "name": "cover_photo",
+        "dbType": "string,2083:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Cover Photo. "
+    },
+    {
+        "name": "currency",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Currency. "
+    },
+    {
+        "name": "first_name",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "First Name. Ex: Mike (type: string) "
+    },
+    {
+        "name": "gender",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Gender. "
+    },
+    {
+        "name": "language",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Language. "
+    },
+    {
+        "name": "last_name",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Last Name. Ex: Sinn (type: string) "
+    },
+    {
+        "name": "state",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "State. An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI (type: string) "
+    },
+    {
+        "name": "tag_line",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Tag Line. "
+    },
+    {
+        "name": "verified",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Verified. "
+    },
+    {
+        "name": "zip_code",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Zip Code. "
+    },
+    {
+        "name": "spam",
+        "dbType": "boolean",
+        "htmlType": "checkbox,1",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Spam. "
+    },
+    {
+        "name": "deleted",
+        "dbType": "boolean",
+        "htmlType": "checkbox,1",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Deleted. "
+    },
+    {
+        "name": "card_brand",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Card Brand. "
+    },
+    {
+        "name": "card_last_four",
+        "dbType": "string,4:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Card Last Four. "
+    },
+    {
+        "name": "last_login_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the User was Last Login At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "timezone",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Timezone. "
+    },
+    {
+        "name": "number_of_correlations",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Correlations. Number of correlations for this variable (type: integer) "
+    },
+    {
+        "name": "number_of_connections",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Connections. "
+    },
+    {
+        "name": "number_of_tracking_reminders",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Tracking Reminders. Ex: 1 (type: integer) "
+    },
+    {
+        "name": "number_of_user_variables",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of User Variables. Ex: 2 (type: integer) "
+    },
+    {
+        "name": "number_of_raw_measurements_with_tags",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Raw Measurements With Tags. "
+    },
+    {
+        "name": "number_of_raw_measurements_with_tags_at_last_correlation",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Raw Measurements With Tags at Last Correlation. "
+    },
+    {
+        "name": "number_of_votes",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Votes. "
+    },
+    {
+        "name": "number_of_studies",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Studies. "
+    },
+    {
+        "name": "last_correlation_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the User was Last Correlation At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "last_email_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the User was Last Email At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "last_push_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the User was Last Push At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "primary_outcome_variable_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Primary Outcome Variable ID. A good primary outcome variable is something that you want to improve and that changes inexplicably. For instance, if you have anxiety, back pain or arthritis which is worse on some days than others, these would be good candidates for primary outcome variables.  Recording their severity and potential factors will help you identify hidden factors exacerbating or improving them.  (type: integer) "
+    },
+    {
+        "name": "wp_post_id",
+        "dbType": "bigInteger,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Wp Post ID. "
+    },
+    {
+        "name": "analysis_ended_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the User was Analysis Ended At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "analysis_requested_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the User was Analysis Requested At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "analysis_started_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the User was Analysis Started At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "internal_error_message",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Internal Error Message. "
+    },
+    {
+        "name": "newest_data_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the User was Newest Data At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "reason_for_analysis",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Reason for Analysis. "
+    },
+    {
+        "name": "user_error_message",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "User Error Message. "
+    },
+    {
+        "name": "status",
+        "dbType": "string,25:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Status. ex. OK or ERROR (type: string) "
+    },
+    {
+        "name": "analysis_settings_modified_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the User was Analysis Settings Modified At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Variable,primary_outcome_variable_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,WpPost,wp_post_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Application,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OAAccessToken,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,oa_authorization_codes"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OAClient,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,BORefreshToken,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,button_clicks"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,buttons"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,cards"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Collaborator,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Connection,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,ConnectorImport,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Correlation,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,credentials"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,device_tokens"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,measurement_exports"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,measurement_imports"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Measurement,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OBackendAccessLog,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OBackendUserPreference,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OBackendUserThrottle,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1t1,OBackendUser"
+    },
+    {
+        "type": "relation",
+        "relation": "1t1,OBackendUsersGroup"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OCmsThemeLog,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OFlynsarmySocialloginUserProvider,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,ORainlabBlogPost,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,ORainlabUserMailBlocker,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OSession,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OSystemRevision,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OUserThrottle,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1t1,OUsersGroup"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,phrases"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,purchases"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,SentEmail,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Study,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Subscription,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,tracker_log"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,tracker_sessions"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,TrackingReminderNotification,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,TrackingReminder,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,user_clients"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,UserTag,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,UserVariableClient,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,UserVariable,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,VariableUserSource,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Vote,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpBpActivity,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpBpFriend,friend_user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpBpFriend,initiator_user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpBpGroupsMember,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpBpMessagesRecipient,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpBpNotification,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpBpUserBlog,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpBpXprofileDatum,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpPost,wp_comments"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpLink,link_owner"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpPost,post_author"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpUsermetum,user_id"
+    }
+]

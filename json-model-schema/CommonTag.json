@@ -1,0 +1,178 @@
+[
+    {
+        "name": "id",
+        "dbType": "integer,true,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Unique identified for the record "
+    },
+    {
+        "name": "tagged_variable_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Tagged Variable ID. This is the id of the variable being tagged with an ingredient or something. ID of the tagged variable (i.e. Lollipop) you would like to get variables it can be tagged with (i.e. Sugar).  Converted measurements of the tagged variable are included in analysis of the tag variable (i.e. ingredient). (type: integer) "
+    },
+    {
+        "name": "tag_variable_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Tag Variable ID. This is the id of the ingredient variable whose value is determined based on the value of the tagged variable. ID of the tag variable (i.e. Sugar) you would like to get variables it can be tagged to (i.e. Lollipop).  Converted measurements of the tagged variable are included in analysis of the tag variable (i.e. ingredient). (type: integer) "
+    },
+    {
+        "name": "number_of_data_points",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Data Points. The number of data points used to estimate the mean. "
+    },
+    {
+        "name": "standard_error",
+        "dbType": "float,10,0",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Standard Error. Measure of variability of the \r\nmean value as a function of the number of data points. "
+    },
+    {
+        "name": "tag_variable_unit_id",
+        "dbType": "smallInteger,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Tag Variable Unit ID. The id for the unit of the tag (ingredient) variable. "
+    },
+    {
+        "name": "tagged_variable_unit_id",
+        "dbType": "smallInteger,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Tagged Variable Unit ID. The unit for the source variable to be tagged. "
+    },
+    {
+        "name": "conversion_factor",
+        "dbType": "float,10,0",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Conversion Factor. Number by which we multiply the tagged variable's value to obtain the tag variable's value. Number by which we multiply the tagged variable value to obtain the tag variable (ingredient) value (type: number) "
+    },
+    {
+        "name": "client_id",
+        "dbType": "string,80:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Client ID. Your QuantiModo client id can be obtained by creating an app at https:\/\/builder.quantimo.do (type: string) "
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Common Tag was Created At. When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Common Tag was Updated At. When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "deleted_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Common Tag was Deleted At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,OAClient,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Variable,tag_variable_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Unit,tag_variable_unit_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Variable,tagged_variable_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Unit,tagged_variable_unit_id"
+    }
+]

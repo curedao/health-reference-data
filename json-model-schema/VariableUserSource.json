@@ -1,0 +1,213 @@
+[
+    {
+        "name": "user_id",
+        "dbType": "bigInteger,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Numeric User ID"
+    },
+    {
+        "name": "variable_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Variable ID. ID of variable. Ex: 13 (type: integer) "
+    },
+    {
+        "name": "timestamp",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Timestamp. Time that this measurement occurred\n\nUses epoch minute (epoch time divided by 60). Timestamp for the measurement event in epoch time (unixtime) (type: integer) "
+    },
+    {
+        "name": "earliest_measurement_time",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Earliest measurement time. Excluded records with measurement times earlier than this value. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss  datetime format. Time zone should be UTC and not local. (type: string) "
+    },
+    {
+        "name": "latest_measurement_time",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Latest measurement time. Excluded records with measurement times later than this value. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss  datetime format. Time zone should be UTC and not local. (type: string) "
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Variable User Source was Created At. When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Variable User Source was Updated At. When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "deleted_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Variable User Source was Deleted At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "data_source_name",
+        "dbType": "string,80",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Data Source Name. "
+    },
+    {
+        "name": "number_of_raw_measurements",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Raw Measurements. Filter variables by the total number of measurements that they have. This could be used of you want to filter or sort by popularity. (type: string) "
+    },
+    {
+        "name": "client_id",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Client ID. Your QuantiModo client id can be obtained by creating an app at https:\/\/builder.quantimo.do (type: string) "
+    },
+    {
+        "name": "id",
+        "dbType": "integer,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Unique identified for the record "
+    },
+    {
+        "name": "user_variable_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "User Variable ID. "
+    },
+    {
+        "name": "earliest_measurement_start_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the Variable User Source was Earliest Measurement Start At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "latest_measurement_start_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the Variable User Source was Latest Measurement Start At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,OAClient,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,WpUser,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,UserVariable,user_variable_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Variable,variable_id"
+    }
+]

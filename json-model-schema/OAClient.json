@@ -1,0 +1,482 @@
+[
+    {
+        "name": "client_id",
+        "dbType": "string,80",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Client ID. Your QuantiModo client id can be obtained by creating an app at https:\/\/builder.quantimo.do (type: string) "
+    },
+    {
+        "name": "client_secret",
+        "dbType": "string,80",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Client Secret. Get yours at https::\/\/builder.quantimo.do (type: string) "
+    },
+    {
+        "name": "redirect_uri",
+        "dbType": "string,2000:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Redirect Uri. "
+    },
+    {
+        "name": "grant_types",
+        "dbType": "string,80:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Grant Types. "
+    },
+    {
+        "name": "user_id",
+        "dbType": "bigInteger,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Numeric User ID"
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Oauth Client was Created At. When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Oauth Client was Updated At. When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "icon_url",
+        "dbType": "string,2083:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Icon Url. "
+    },
+    {
+        "name": "app_identifier",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "App IDentifier. "
+    },
+    {
+        "name": "deleted_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Oauth Client was Deleted At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "earliest_measurement_start_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the Oauth Client was Earliest Measurement Start At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "latest_measurement_start_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Time at which the Oauth Client was Latest Measurement Start At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "number_of_aggregate_correlations",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Aggregate Correlations. Number of Global Population Studies for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(id) as total, client_id\n                            from aggregate_correlations\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_aggregate_correlations = count(grouped.total)\n                ]\n                . "
+    },
+    {
+        "name": "number_of_applications",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Applications. Number of Applications for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(id) as total, client_id\n                            from applications\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_applications = count(grouped.total)\n                ]\n                . "
+    },
+    {
+        "name": "number_of_oauth_access_tokens",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Oauth Access Tokens. Number of OAuth Access Tokens for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(access_token) as total, client_id\n                            from oa_access_tokens\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_oauth_access_tokens = count(grouped.total)\n                ]\n                . "
+    },
+    {
+        "name": "number_of_oauth_authorization_codes",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Oauth Authorization Codes. Number of OAuth Authorization Codes for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(authorization_code) as total, client_id\n                            from oa_authorization_codes\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_oauth_authorization_codes = count(grouped.total)\n                ]\n                . "
+    },
+    {
+        "name": "number_of_oauth_refresh_tokens",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Oauth Refresh Tokens. Number of OAuth Refresh Tokens for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(refresh_token) as total, client_id\n                            from oa_refresh_tokens\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_oauth_refresh_tokens = count(grouped.total)\n                ]\n                . "
+    },
+    {
+        "name": "number_of_button_clicks",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Button Clicks. Number of Button Clicks for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(id) as total, client_id\n                            from button_clicks\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_button_clicks = count(grouped.total)\n                ]\n                . "
+    },
+    {
+        "name": "number_of_collaborators",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Collaborators. Number of Collaborators for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(id) as total, client_id\n                            from collaborators\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_collaborators = count(grouped.total)\n                ]\n                . "
+    },
+    {
+        "name": "number_of_common_tags",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Common Tags. Number of Common Tags for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(id) as total, client_id\n                            from common_tags\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_common_tags = count(grouped.total)\n                ]\n                . "
+    },
+    {
+        "name": "number_of_connections",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Connections. Number of Connections for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(id) as total, client_id\n                            from connections\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_connections = count(grouped.total)\n                ]\n                . "
+    },
+    {
+        "name": "number_of_connector_imports",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Connector Imports. Number of Connector Imports for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(id) as total, client_id\n                            from connector_imports\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_connector_imports = count(grouped.total)\n                ]\n                . "
+    },
+    {
+        "name": "number_of_connectors",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Connectors. Number of Connectors for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(id) as total, client_id\n                            from connectors\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_connectors = count(grouped.total)\n                ]\n                . "
+    },
+    {
+        "name": "number_of_correlations",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Number of Correlations. Number of Individual Case Studies for this Client.\n                [Formula: \n                    update oa_clients\n                        left join (\n                            select count(id) as total, client_id\n                            from correlations\n                            group by client_id\n                        )\n                        as grouped on oa_clients.client_id = grouped.client_id\n                    set oa_clients.number_of_correlations = count(grouped.total)\n                ]\n                . Number of correlations for this variable (type: integer) "
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,WpUser,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,AggregateCorrelation,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Application,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OAAccessToken,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,OAAccessToken,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,oa_authorization_codes"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,BORefreshToken,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,BORefreshToken,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,button_clicks"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,buttons"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,cards"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Collaborator,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,CommonTag,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Connection,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,ConnectorImport,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpPost,connectors"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,CorrelationCausalityVote,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,CorrelationUsefulnessVote,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Correlation,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,credentials"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,device_tokens"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,measurement_exports"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,measurement_imports"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Measurement,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,phrases"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,purchases"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,SentEmail,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,SourcePlatform,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Study,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,ThirdPartyCorrelation,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,tracker_log"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,tracker_sessions"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,TrackingReminderNotification,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,TrackingReminder,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,user_clients"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,UserTag,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,UserVariableClient,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,UserVariable,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,VariableUserSource,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Variable,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Vote,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpBpActivityMetum,client_id"
+    }
+]

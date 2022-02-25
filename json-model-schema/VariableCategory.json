@@ -1,0 +1,332 @@
+[
+    {
+        "name": "id",
+        "dbType": "boolean",
+        "htmlType": "checkbox,1",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Unique identified for the record "
+    },
+    {
+        "name": "name",
+        "dbType": "string,64",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Name. Name of the category. Obtain a token from 3rd party data source "
+    },
+    {
+        "name": "filling_value",
+        "dbType": "float,10,0",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Filling Value. Value for replacing null measurements. User-Defined Variable Setting: When it comes to analysis to determine the effects of this variable, knowing when it did not occur is as important as knowing when it did occur. For example, if you are tracking a medication, it is important to know when you did not take it, but you do not have to log zero values for all the days when you have not taken it. Hence, you can specify a filling value (typically 0) to insert whenever data is missing.  Unit: User-specified or common. (type: number) "
+    },
+    {
+        "name": "maximum_allowed_value",
+        "dbType": "float,10,0",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Maximum Allowed Value. Maximum recorded value of this category. User-Defined Variable Setting: The maximum allowed value a single measurement. While you can record a value above this maximum, it will be excluded from the correlation analysis.  Unit: User-specified or common. (type: number) "
+    },
+    {
+        "name": "minimum_allowed_value",
+        "dbType": "float,10,0",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Minimum Allowed Value. Minimum recorded value of this category. User-Defined Variable Setting: The minimum allowed value a single measurement. While you can record a value below this minimum, it will be excluded from the correlation analysis. Unit: User-specified or common (type: number) "
+    },
+    {
+        "name": "duration_of_action",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Duration of Action. How long the effect of a measurement in this variable lasts. The amount of time over which a predictor\/stimulus event can exert an observable influence on an outcome variable value. For instance, aspirin (stimulus\/predictor) typically decreases headache severity for approximately four hours (duration of action) following the onset delay. Unit: Seconds (type: string) "
+    },
+    {
+        "name": "onset_delay",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Onset Delay. How long it takes for a measurement in this variable to take effect. The amount of time in seconds that elapses after the predictor\/stimulus event before the outcome as perceived by a self-tracker is known as the onset delay. For example, the onset delay between the time a person takes an aspirin (predictor\/stimulus event) and the time a person perceives a change in their headache severity (outcome) is approximately 30 minutes. (type: string) "
+    },
+    {
+        "name": "combination_operation",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Combination Operation. How to combine values of this variable (for instance, to see a summary of the values over a month) SUM or MEAN. User-Defined Variable Setting: How to aggregate measurements over time. SUM should be used for things like minutes of exercise.  If you use MEAN for exercise, then a person might exercise more minutes in one day but add separate measurements that were smaller.  So when we are doing correlational analysis, we would think that the person exercised less that day even though they exercised more.  Conversely, we must use MEAN for things such as ratings which cannot be SUMMED. (type: string) "
+    },
+    {
+        "name": "updated",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Updated. updated (type: integer) "
+    },
+    {
+        "name": "cause_only",
+        "dbType": "boolean",
+        "htmlType": "checkbox,1",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Cause Only. A value of 1 indicates that this category is generally a cause in a causal relationship.  An example of a causeOnly category would be a category such as Work which would generally not be influenced by the behaviour of the user. User-Defined Variable Setting: True indicates that this variable is generally a cause in a causal relationship.  An example of a causeOnly variable would be a variable such as Cloud Cover which would generally not be influenced by the behaviour of the user (type: boolean) "
+    },
+    {
+        "name": "public",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Public. Is category public. Should this variable show up in automcomplete searches for users who do not already have measurements for it? (type: boolean) "
+    },
+    {
+        "name": "outcome",
+        "dbType": "boolean:nullable",
+        "htmlType": "checkbox,1",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Outcome. User-Defined Variable Setting: True for variables for which a human would generally want to identify the influencing factors. These include symptoms of illness, physique, mood, cognitive performance, etc.  Generally correlation calculations are only performed on outcome variables (type: boolean) "
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Variable Category was Created At. When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Variable Category was Updated At. When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "image_url",
+        "dbType": "text,255:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Image URL. Ex: https:\/\/s3-us-west-1.amazonaws.com\/qmimages\/variable_categories_gauges_logo_background\/gauge-moderately-positive-relationship_sleep_emotions_logo_background.png (type: string) "
+    },
+    {
+        "name": "default_unit_id",
+        "dbType": "smallInteger,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Default Unit ID. ID of the default unit for the category. "
+    },
+    {
+        "name": "deleted_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Variable Category was Deleted At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "manual_tracking",
+        "dbType": "boolean",
+        "htmlType": "checkbox,1",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Manual Tracking. Should we include in manual tracking searches?. Only include variables tracked manually by the user (type: boolean) "
+    },
+    {
+        "name": "minimum_allowed_seconds_between_measurements",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Minimum Allowed Seconds Between Measurements. "
+    },
+    {
+        "name": "average_seconds_between_measurements",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Average Seconds Between Measurements. "
+    },
+    {
+        "name": "median_seconds_between_measurements",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Median Seconds Between Measurements. "
+    },
+    {
+        "name": "wp_post_id",
+        "dbType": "bigInteger,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Wp Post ID. "
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Unit,default_unit_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,WpPost,wp_post_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,AggregateCorrelation,cause_variable_category_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,AggregateCorrelation,effect_variable_category_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Correlation,cause_variable_category_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Correlation,effect_variable_category_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Measurement,variable_category_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,ThirdPartyCorrelation,cause_variable_category_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,ThirdPartyCorrelation,effect_variable_category_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,UserVariable,variable_category_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Variable,variable_category_id"
+    }
+]

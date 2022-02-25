@@ -1,0 +1,341 @@
+[
+    {
+        "name": "id",
+        "dbType": "bigInteger,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Unique identified for the record "
+    },
+    {
+        "name": "user_id",
+        "dbType": "bigInteger,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Numeric User ID"
+    },
+    {
+        "name": "client_id",
+        "dbType": "string,80:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Client ID. Your QuantiModo client id can be obtained by creating an app at https:\/\/builder.quantimo.do (type: string) "
+    },
+    {
+        "name": "connector_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Connector ID. The id for the connector data source from which the measurement was obtained. Ex: 13 (type: integer) "
+    },
+    {
+        "name": "variable_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Variable ID. ID of the variable for which we are creating the measurement records. Ex: 13 (type: integer) "
+    },
+    {
+        "name": "value",
+        "dbType": "float,10,0",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Value. The value of the measurement after conversion to the default unit for that variable. Value of measurement (type: string) "
+    },
+    {
+        "name": "unit_id",
+        "dbType": "smallInteger,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Unit ID. The default unit for the variable. ID of unit to use for this variable (type: integer) "
+    },
+    {
+        "name": "original_value",
+        "dbType": "float,10,0",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Original Value. Value of measurement as originally posted (before conversion to default unit). Original value submitted. Unit: Originally submitted. (type: number) "
+    },
+    {
+        "name": "original_unit_id",
+        "dbType": "smallInteger,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Original Unit ID. Unit id of measurement as originally submitted. Ex: 23 (type: integer) "
+    },
+    {
+        "name": "duration",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Duration. Duration of the event being measurement in seconds. "
+    },
+    {
+        "name": "note",
+        "dbType": "text,65535:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Note. An optional note the user may include with their measurement. Optional note to include with the measurement (type: string) "
+    },
+    {
+        "name": "latitude",
+        "dbType": "float,10,0",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Latitude. Latitude at which the measurement was taken. Latitude. Unit: User-specified or common. (type: number) "
+    },
+    {
+        "name": "longitude",
+        "dbType": "float,10,0",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Longitude. Longitude at which the measurement was taken. Longitude (type: number) "
+    },
+    {
+        "name": "location",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "location. Location (type: string) "
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Measurement was Created At. When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Measurement was Updated At. When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "error",
+        "dbType": "text,65535:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Error. An error message if there is a problem with the measurement. Ex: Measurement is too large (type: string) "
+    },
+    {
+        "name": "variable_category_id",
+        "dbType": "boolean:nullable",
+        "htmlType": "checkbox,1",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Variable category ID. Ex: 13 (type: integer) "
+    },
+    {
+        "name": "deleted_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Measurement was soft-deleted.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "user_variable_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "User Variable ID. "
+    },
+    {
+        "name": "start_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Start time of the observation in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "connection_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "ID of the API connection used to make the measurement. "
+    },
+    {
+        "name": "connector_import_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "ID of the Connector Import batch job. "
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,OAClient,client_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Connection,connection_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,ConnectorImport,connector_import_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Connector,connector_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Unit,original_unit_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Unit,unit_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,WpUser,user_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,UserVariable,user_variable_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,VariableCategory,variable_category_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Variable,variable_id"
+    }
+]

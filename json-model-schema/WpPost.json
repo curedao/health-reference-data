@@ -1,0 +1,409 @@
+[
+    {
+        "name": "ID",
+        "dbType": "bigInteger,true,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "ID. Unique number assigned to each post. ID of the cohort study which is necessary to allow participants to join (type: string) "
+    },
+    {
+        "name": "post_author",
+        "dbType": "bigInteger,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Author. The user ID who created it. "
+    },
+    {
+        "name": "post_date",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Date. Time and date of creation. "
+    },
+    {
+        "name": "post_date_gmt",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Date Gmt. GMT time and date of creation. The GMT time and date is stored so there is no dependency on a site\u2019s timezone in the future. "
+    },
+    {
+        "name": "post_content",
+        "dbType": "text:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Content. Holds all the content for the post, including HTML, shortcodes and other content. "
+    },
+    {
+        "name": "post_title",
+        "dbType": "text,65535:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Title. Title of the post. "
+    },
+    {
+        "name": "post_excerpt",
+        "dbType": "text,65535:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Excerpt. Custom intro or short version of the content. "
+    },
+    {
+        "name": "post_status",
+        "dbType": "string,20:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Status. Status of the post, e.g. \u2018draft\u2019, \u2018pending\u2019, \u2018private\u2019, \u2018publish\u2019. Also a great WordPress <a href=\"https:\/\/poststatus.com\/\" target=\"_blank\">news site<\/a>. "
+    },
+    {
+        "name": "comment_status",
+        "dbType": "string,20:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Comment Status. If comments are allowed. "
+    },
+    {
+        "name": "ping_status",
+        "dbType": "string,20:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Ping Status. If the post allows <a href=\"http:\/\/codex.wordpress.org\/Introduction_to_Blogging#Pingbacks\" target=\"_blank\">ping and trackbacks<\/a>. "
+    },
+    {
+        "name": "post_password",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Password. Optional password used to view the post. "
+    },
+    {
+        "name": "post_name",
+        "dbType": "string,200:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Name. URL friendly slug of the post title. "
+    },
+    {
+        "name": "to_ping",
+        "dbType": "text,65535:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "To Ping. A list of URLs WordPress should send pingbacks to when updated. "
+    },
+    {
+        "name": "pinged",
+        "dbType": "text,65535:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Pinged. A list of URLs WordPress has sent pingbacks to when updated. "
+    },
+    {
+        "name": "post_modified",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Modified. Time and date of last modification. "
+    },
+    {
+        "name": "post_modified_gmt",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Modified Gmt. GMT time and date of last modification. "
+    },
+    {
+        "name": "post_content_filtered",
+        "dbType": "text:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Content Filtered. Used by plugins to cache a version of post_content typically passed through the \u2018the_content\u2019 filter. Not used by WordPress core itself. "
+    },
+    {
+        "name": "post_parent",
+        "dbType": "bigInteger,false,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Parent. Used to create a relationship between this post and another when this post is a revision, attachment or another type. "
+    },
+    {
+        "name": "guid",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Guid. Global Unique IDentifier, the permanent URL to the post, not the permalink version. "
+    },
+    {
+        "name": "menu_order",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Menu Order. Holds the display number for pages and other non-post types. "
+    },
+    {
+        "name": "post_type",
+        "dbType": "string,20:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Type. The content type identifier. "
+    },
+    {
+        "name": "post_mime_type",
+        "dbType": "string,100:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Post Mime Type. Only used for attachments, the MIME type of the uploaded file. "
+    },
+    {
+        "name": "comment_count",
+        "dbType": "bigInteger,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Comment Count. Total number of comments, pingbacks and trackbacks. "
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Wp Post was Updated At. When the record was last updated. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Wp Post was Created At. When the record was first created. Use UTC ISO 8601 YYYY-MM-DDThh:mm:ss datetime format. Time zone should be UTC and not local. (type: string)  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "deleted_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false,
+        "comment": "Time at which the Wp Post was Deleted At.  in the format YYYY-MM-DD HH:MM:SS in the UTC timezone. "
+    },
+    {
+        "name": "client_id",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true,
+        "comment": "Client ID. Your QuantiModo client id can be obtained by creating an app at https:\/\/builder.quantimo.do (type: string) "
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,WpUser,post_author"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,AggregateCorrelation,wp_post_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Application,wp_post_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Connection,wp_post_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,OAClient,connectors"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Correlation,wp_post_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,SentEmail,wp_post_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,UserVariable,wp_post_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,VariableCategory,wp_post_id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Variable,wp_post_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpUser,wp_comments"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpPostmetum,post_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,WpTermTaxonomy,wp_term_relationships"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,WpUser,wp_post_id"
+    }
+]
