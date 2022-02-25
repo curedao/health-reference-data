@@ -1,0 +1,513 @@
+<html lang="en-US" class="no-js">
+<head>
+  <!-- Start resources/views/meta.blade.php-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Variable Categories</title>
+<meta name="description" content="Categories of of trackable variables include Treatments, Emotions, Symptoms, and Foods.">
+<meta name="keywords" content="Variable Categories">
+<meta name="author" content="Crowdsourcing Cures">
+<!--Google+ Metadata /-->
+<meta itemprop="name" content="Crowdsourcing Cures">
+<meta itemprop="description" content="Categories of of trackable variables include Treatments, Emotions, Symptoms, and Foods."/>
+<meta itemprop="image" content="public/img/variable_categories"/>
+<!-- Twitter Metadata -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@quantimodo">
+<meta name="twitter:title" content="Crowdsourcing Cures">
+<meta name="twitter:description" content="Categories of of trackable variables include Treatments, Emotions, Symptoms, and Foods.">
+<meta name="twitter:image" content="public/img/variable_categories"/>
+<meta name="twitter:domain" content="https://quantimo.do">
+<!--Facebook Metadata -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quantimo.do">
+<meta property="fb:app_id" content="225078261031461">
+<meta property="og:image" content="public/img/variable_categories">
+<meta property="og:description" content="Categories of of trackable variables include Treatments, Emotions, Symptoms, and Foods.">
+<meta property="og:title" content="Crowdsourcing Cures">
+<meta name="shortcut icon" content="https://quantimodo.s3.amazonaws.com/app_uploads/quantimodo/app_images_appIcon.png">
+<link rel="icon" type="image/x-icon" href="https://quantimodo.s3.amazonaws.com/app_uploads/quantimodo/app_images_appIcon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://quantimodo.s3.amazonaws.com/app_uploads/quantimodo/app_images_appIcon.png">
+<!-- Set default share picture after custom section pictures -->
+<meta name="image" property="image" content="https://static.quantimo.do/images/default-logo.png">
+<!-- End resources/views/footer-js.blade.php -->
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="https://adminlte.io/themes/AdminLTE/plugins/pace/pace.min.css">
+    <style>
+        .pace .pace-progress {
+            background: #2299dd;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" >
+    <!-- Sortable tables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://static.quantimo.do/css/so-simple.css">
+    <link rel="stylesheet" href="https://static.quantimo.do/css/jekyll-text-theme.css">
+    <link rel="stylesheet" href="https://static.quantimo.do/css/toc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.css">
+    <link rel="alternate" type="application/atom+xml" title="QuantiModo" href="feed.xml">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://static.quantimo.do/js/psychedelic-loader.js" defer></script>
+</head><body class="layout--default">
+<nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+<div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul>
+                  <li>
+              <a href="https://quantimo.do">
+                  <i class="fas fa-info-circle"></i>&nbsp;
+                  About Us
+              </a>
+          </li>
+                  <li>
+              <a href="mailto:mike@quantimo.do">
+                  <i class="fab fa-facebook-messenger"></i>&nbsp;
+                  Contact Us
+              </a>
+          </li>
+                  <li>
+              <a href="https://web.quantimo.do/#/app/onboarding">
+                  <i class="far fa-edit"></i>&nbsp;
+                  Start Tracking
+              </a>
+          </li>
+              </ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+<script>
+    $(document).ready(function() {
+        // main menu toggle
+        var toggleButton = document.getElementById("menu-toggle");
+        var menu = document.getElementById("primary-nav");
+        if (toggleButton && menu) {
+            toggleButton.addEventListener("click", function() {
+                menu.classList.toggle("js-menu-is-open");
+            });
+        }
+        // initialize smooth scroll
+        // Not sure what smooth scroll is for? $("a").smoothScroll({ offset: -20 });
+        // add lightbox class to all image links
+        $("a[href$='.jpg'], a[href$='.png'], a[href$='.gif']").attr("data-lity", "");
+    });
+</script><header class="masthead">
+  <div class="wrap">
+      <a href="/" class="site-logo" rel="home" title="The Journal of Citizen Science">
+          <img src="https://static.quantimo.do/img/icons/crowdsourcing-utopia/crowdsourcing-utopia-icon-1024-1024-padding.png"
+               class="site-logo-img animated fadeInDown" alt="The Journal of Citizen Science">
+      </a>
+      <h1 class="site-title animated fadeIn"><a href="/">The Journal of Citizen Science</a></h1>
+      <p class="site-description animated fadeIn" itemprop="description">Ending suffering through crowdsourced clinical research. </p>
+  </div>
+</header><!-- /.masthead -->
+<main id="main" class="main-content" aria-label="Content">
+    <article>
+        <div class="page-wrapper">
+            <header class="page-header" style="display: none;">
+                <h1 id="page-title" class="page-title">name</h1>
+            </header>
+            <div class="page-content js-toc-content">
+                <div style="padding: 1rem;">
+                    <div id="variable-category-list" class="flex flex-wrap justify-center">
+            <a href="https://studies.crowdsourcingcures.org/categories/Emotions"
+   title="Do you have any emotions that fluctuate regularly?  If so, add them so I can try to determine which factors are influencing them."
+    data-search="Emotions, Emotion, Mood">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/theatre_mask-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Emotions
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    43085
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Physique"
+   title="I can give you easy access to your weight and other vitals. You can manually enter weight, but I recommend using a Fitbit or Withings wifi scale for the most detailed data. I can create a beautiful graph of your weight changes, so you can easily keep track of whether you&#039;re hitting your goals. Body weight doesn&#039;t tell the whole story, so I also support body fat percent. "
+    data-search="Physique">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/yoga-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Physique
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    949
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Physical_Activity"
+   title="I get steps from a variety of sources like Fitbit &amp; Jawbone. Even if you don&#039;t have any fitness trackers, you can manually record any physical activity, like running, cycling, or going to the gym."
+    data-search="Physical Activity, Physical Activities">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/weightlifting-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Physical Activity
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    2407
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Sleep"
+   title="I can talk to many of the most popular sleep trackers like Fitbit, Jawbone, Sleep as Android, and Withings"
+    data-search="Sleep">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/sleeping_in_bed-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Sleep
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    2014
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Social_Interactions"
+   title="A social relation or social interaction is any relationship between two or more individuals. "
+    data-search="Social Interactions, Social Interaction">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/collaboration-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Social Interactions
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    1126
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Vital_Signs"
+   title="Your vital signs show how well your body is functioning. They include blood pressure, heart rate, respiratory rate (or pulse), and temperature."
+    data-search="Vital Signs, Vital Sign">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/heart_monitor-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Vital Signs
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    654
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Cognitive_Performance"
+   title="See what factors could be harming or enhancing your cognitive performance."
+    data-search="Cognitive Performance">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/brain-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Cognitive Performance
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    27
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Symptoms"
+   title="Symptom severity can be influence by hundreds of factors in daily life. The human mind can only hold 7 numbers in working memory at a time.  I can hold a billion in my mind! If you regularly record your symptoms, add them so I can use this data to determine which hidden and imperceptible factors might be worsening or improving them."
+    data-search="Symptoms, Symptom">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/sad-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Symptoms
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    8167
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Nutrients"
+   title="Nutrients are compounds in foods essential to life and health, providing us with energy, the building blocks for repair and growth and substances necessary to regulate chemical processes."
+    data-search="Nutrients, Nutrient">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/vegetarian_food-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Nutrients
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    6012
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Goals"
+   title="Setting goals gives your life direction, and boosts your motivation and self-confidence. "
+    data-search="Work, Productivity, Goals, Goal">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/work-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Goals
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    494
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Treatments"
+   title="Often the effects of medications and treatments aren&#039;t intuitively perceptible. That&#039;s where I come in!  If you regularly record your treatments,  I can analyze the data so we can get a better idea which ones are helping you,which one may be harming you, and which ones are merely a waste of money."
+    data-search="Health and Beauty, Health &amp; Beauty, Treatments, Treatment, HealthPersonalCare, Baby Product, Home">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/treatments.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Treatments
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    5715
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Activities"
+   title="Non-physical activities like studying."
+    data-search="Activities, Activity">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/basic-flat-icons/png/clock.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Activities
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    9345
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Foods"
+   title="Diet can have a significant impact on your health. It&#039;s important to enter any foods that you regularly eat to see how they might be affecting you."
+    data-search="Grocery, Foods, Food, GourmetFood">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/vegetarian_food-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Foods
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    8938
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Conditions"
+   title="Disease states or conditions that produce various symptoms. "
+    data-search="Conditions, Condition">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/dizzy_person_2-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Conditions
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    2
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Environment"
+   title="By recording your local weather conditions, I might be able to figure out how the amount of sunlight or temperature is affecting you."
+    data-search="Environment">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/environment.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Environment
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    12947
+                </span>
+                    </div>
+    </div>
+</a>
+            <a href="https://studies.crowdsourcingcures.org/categories/Causes_of_Illness"
+   title="Factors leading or increasing the severity of illness or disease. "
+    data-search="Causes of Illness, Cause of Illness">
+    <div class="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-purple-700 bg-purple-100 border border-purple-300 ">
+                    <div slot="avatar">
+                <div class="flex relative w-4 h-4 bg-orange-500 justify-center items-center m-1 mr-2 ml-0 my-0 text rounded-full">
+                    <img class="rounded-full" alt="A" src="https://static.quantimo.do/img/variable_categories/virus-96.png">
+                </div>
+            </div>
+                <div class="text font-normal leading-none max-w-full flex-initial">
+            Causes of Illness
+                            <span style="font-size: 0.6rem;"
+                    class="badge rounded-full px-1 py-1 text-center object-right-top bg-white border border-purple-300">
+                    133
+                </span>
+                    </div>
+    </div>
+</a>
+    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+<footer id="footer" class="site-footer">
+    <div class="social-icons">
+                    <a class="social-icon" href="https://quantimo.do">
+                <i class="fas fa-info-circle fa-2x" title="Better living through data."></i>
+            </a>
+                    <a class="social-icon" href="https://docs.quantimo.do">
+                <i class="fas fa-book fa-2x" title="Interactive documentation/playground for the QuantiModo Application Programming Interface (API)"></i>
+            </a>
+                    <a class="social-icon" href="https://builder.quantimo.do">
+                <i class="fas fa-tools fa-2x" title="The App Builder allows anyone to create their own digital health app in minutes without any coding.  Their application can then also be built and released on iOS, Android, and as a Chrome browser extension. "></i>
+            </a>
+                    <a class="social-icon" href="mailto:mike@quantimo.do">
+                <i class="fab fa-facebook-messenger fa-2x" title="Contact Us"></i>
+            </a>
+                    <a class="social-icon" href="https://studies.crowdsourcingcures.org/datalab">
+                <i class="fas fa-calculator fa-2x" title="The DataLab administrative backend provides a powerful tool to create reports, drill down, clean data, monitor progress through the analytical pipeline, and identify issues.  The DataLab also provides easy navigation between dozens of relationships between the various model class via a data graph. "></i>
+            </a>
+                    <a class="social-icon" href="https://help.quantimo.do">
+                <i class="far fa-question-circle fa-2x" title="Get Help"></i>
+            </a>
+                    <a class="social-icon" href="https://github.com/QuantiModo/quantimodo-android-chrome-ios-web-app">
+                <i class="fab fa-github fa-2x" title="A Better World Through Data"></i>
+            </a>
+                    <a class="social-icon" href="https://physician.quantimo.do">
+                <i class="fas fa-medkit fa-2x" title="The physician dashboard allows physicians to view their patients data in addition to regularly emailed reports."></i>
+            </a>
+                    <a class="social-icon" href="https://quantimo.do/privacy">
+                <i class="fas fa-lock fa-2x" title="Privacy Policy"></i>
+            </a>
+                    <a class="social-icon" href="https://studies.quantimo.do">
+                <i class="fas fa-flask fa-2x" title="The Journal of Citizen Science"></i>
+            </a>
+                    <a class="social-icon" href="https://quantimo.do/tos">
+                <i class="fas fa-file-contract fa-2x" title="Terms of Service"></i>
+            </a>
+                    <a class="social-icon" href="https://wordpress.org/plugins/quantimodo">
+                <i class="fab fa-wordpress fa-2x" title="The QuantiModo WordPress Plugin facilitates the democratization of clinical research by allowing anyone to create their own research platform.  It allows users to record, aggregate, analyze and visualize their health and life-tracking data.  The data collection, analysis and visualization functionality may be included in any page or post."></i>
+            </a>
+            </div>
+  <div class="copyright">
+      <p>&copy; 2021
+          <a href="https://quantimo.do" rel="nofollow">
+              QuantiModo
+          </a>
+      </p>
+  </div>
+</footer>
+<!-- Start of Async Drift Code -->
+<script type="text/javascript">
+    !function() {
+        var t;
+        if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+            t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+            t.factory = function(e) {
+                return function() {
+                    var n;
+                    return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+                };
+            }, t.methods.forEach(function(e) {
+            t[e] = t.factory(e);
+        }), t.load = function(t) {
+            var e, n, o, i;
+            e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+                o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+                n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+        });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('pt53uxxsr2gg');
+</script>
+<!-- End of Async Drift Code --><script src="https://adminlte.io/themes/AdminLTE/bower_components/PACE/pace.min.js"></script>
+<!-- Start resources/views/loggers-js.blade.php -->
+<script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
+<script>if(window.location.href.indexOf("app.quantimo.do") > -1){LogRocket.init('mkcthl/quantimodo');}</script>
+<script type="text/javascript" src="https://d2wy8f7a9ursnm.cloudfront.net/v7/bugsnag.min.js"></script>
+<script type="text/javascript">Bugsnag.start('ae7bc49d1285848342342bb5c321a2cf')</script>
+<script src="https://static.quantimo.do/js/qmLog.js"></script>
+<!-- End resources/views/loggers-js.blade.php -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+</script>
+</body>
+</html>

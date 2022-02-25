@@ -1,0 +1,281 @@
+<html lang="en-US" class="no-js">
+<head>
+  <!-- Start resources/views/meta.blade.php-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economic Indicators</title>
+<meta name="description" content="An economic indicator is a piece of economic data, usually of macroeconomic scale, that is used by analysts to interpret current or future investment possibilities.">
+<meta name="keywords" content="Crowdsourcing Cures">
+<meta name="author" content="Crowdsourcing Cures">
+<!--Google+ Metadata /-->
+<meta itemprop="name" content="Crowdsourcing Cures">
+<meta itemprop="description" content="An economic indicator is a piece of economic data, usually of macroeconomic scale, that is used by a..."/>
+<meta itemprop="image" content="https://static.quantimo.do/img/features/graph-1.png"/>
+<!-- Twitter Metadata -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@quantimodo">
+<meta name="twitter:title" content="Crowdsourcing Cures">
+<meta name="twitter:description" content="An economic indicator is a piece of economic data, usually of macroeconomic scale, that is used by analysts to interpret current or future investment possibilities.">
+<meta name="twitter:image" content="https://static.quantimo.do/img/features/graph-1.png"/>
+<meta name="twitter:domain" content="https://crowdsourcingcures.org">
+<!--Facebook Metadata -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crowdsourcingcures.org">
+<meta property="fb:app_id" content="225078261031461">
+<meta property="og:image" content="https://static.quantimo.do/img/features/graph-1.png">
+<meta property="og:description" content="An economic indicator is a piece of economic data, usually of macroeconomic scale, that is used by analysts to interpret current or future investment possibilities.">
+<meta property="og:title" content="Crowdsourcing Cures">
+<meta name="shortcut icon" content="https://static.quantimo.do/app_uploads/crowdsourcing-cures/app_images_appIcon.png">
+<link rel="icon" type="image/x-icon" href="https://static.quantimo.do/app_uploads/crowdsourcing-cures/app_images_appIcon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://static.quantimo.do/app_uploads/crowdsourcing-cures/app_images_appIcon.png">
+<!-- Set default share picture after custom section pictures -->
+<meta name="image" property="image" content="https://static.quantimo.do/images/default-logo.png">
+<!-- End resources/views/footer-js.blade.php -->
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="https://adminlte.io/themes/AdminLTE/plugins/pace/pace.min.css">
+    <style>
+        .pace .pace-progress {
+            background: #2299dd;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" >
+    <!-- Sortable tables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://static.quantimo.do/css/so-simple.css">
+    <link rel="stylesheet" href="https://static.quantimo.do/css/jekyll-text-theme.css">
+    <link rel="stylesheet" href="https://static.quantimo.do/css/toc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.css">
+    <link rel="alternate" type="application/atom+xml" title="Crowdsourcing Cures" href="feed.xml">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head><body class="layout--default">
+<nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+<div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul>
+                  <li>
+              <a href="mailto:mike@quantimo.do">
+                  Contact Us
+              </a>
+          </li>
+                  <li>
+              <a href="https://web.quantimo.do/#/app/onboarding">
+                  Your Data
+              </a>
+          </li>
+              </ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+<script>
+    $(document).ready(function() {
+        // main menu toggle
+        var toggleButton = document.getElementById("menu-toggle");
+        var menu = document.getElementById("primary-nav");
+        if (toggleButton && menu) {
+            toggleButton.addEventListener("click", function() {
+                menu.classList.toggle("js-menu-is-open");
+            });
+        }
+        // initialize smooth scroll
+        // Not sure what smooth scroll is for? $("a").smoothScroll({ offset: -20 });
+        // add lightbox class to all image links
+        $("a[href$='.jpg'], a[href$='.png'], a[href$='.gif']").attr("data-lity", "");
+    });
+</script><header class="masthead">
+  <div class="wrap">
+      <a href="/" class="site-logo" rel="home" title="The Journal of Citizen Science">
+          <img src="https://static.quantimo.do/img/icons/crowdsourcing-utopia/crowdsourcing-utopia-icon-1024-1024-padding.png"
+               class="site-logo-img animated fadeInDown" alt="The Journal of Citizen Science">
+      </a>
+      <h1 class="site-title animated fadeIn"><a href="/">The Journal of Citizen Science</a></h1>
+      <p class="site-description animated fadeIn" itemprop="description">Ending suffering through crowdsourced clinical research. </p>
+  </div>
+</header><!-- /.masthead -->
+<main id="main" class="main-content" aria-label="Content">
+    <article>
+        <div class="page-wrapper">
+            <header class="page-header" style="display: none;">
+                <h1 id="page-title" class="page-title">Economic Indicators</h1>
+            </header>
+            <div class="page-content js-toc-content">
+                <!-- Start resources/views/search-filter-script.blade.php -->
+<form onsubmit="return false;" style="margin-top: 1rem; margin-bottom: 1rem;">
+    <div style="padding: 0.5em;
+    width: 100%;
+    font-size: 0.9em;
+    border: 1px solid #cccccc;
+    border-radius: 2rem;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);">
+        <i class="fas fa-search" style="padding: 0.5rem"></i>
+        <!--suppress HtmlFormInputWithoutLabel -->
+        <input
+            type="text"
+            style="margin: 0; display: inline; width: 80%"
+            id="variable_categories-input"
+            onkeyup="searchFilter('variable_categories')"
+            placeholder="Search for a ..."
+            autofocus>
+    </div>
+</form>
+<script src="https://static.quantimo.do/js/search-filter.js"></script>
+<!-- End resources/views/search-filter-script.blade.php --><div id="variable_categories-list" class="flex flex-wrap justify-center">
+    </div><div id="not-found-box" class="p-8" style="display: block;">
+    <div class="bg-white rounded-lg shadow-xl">
+        <div class="p-16">
+            <div style="text-align: center; margin:auto;">
+                <img
+                        src="https://static.quantimo.do/img/robots/quantimodo-robot-puzzled-213-300.png"
+                        style="text-align: center; margin:auto; max-height: 200px;"
+                        alt="PUZZLED_ROBOT"
+                >
+            </div>
+            <div class="mt-8 text-center">
+                <h1 class="font-bold text-lg text-gray-700 mb-1">
+                    Don't see what you're looking for?
+                </h1>
+                <div>
+                    <p class="text-gray-600">
+                        Create a study and help us eradicate suffering!
+                    </p>
+                </div>
+                                                            <!-- Start resources/views/button-pink-rounded.blade.php -->
+<a
+        href="https://web.quantimo.do/#/app/onboarding"
+        title="Going through the onboarding process makes it easy to tracking and discover hidden factors affecting your well-being!"
+        target="_blank"
+        class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-base px-8 py-3 rounded-full shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+        type="button"
+        style="margin: 1rem; transition: all .15s ease;"
+>
+    <i class="far fa-edit"></i>
+    Start Tracking
+</a>
+<!-- End resources/views/button-pink-rounded.blade.php -->
+                                            <!-- Start resources/views/button-pink-rounded.blade.php -->
+<a
+        href="https://studies.crowdsourcingcures.org/variables"
+        title="Variable overviews with statistics, analysis settings, and data visualizations and likely outcomes or predictors based on the anonymously aggregated donated data. "
+        target="_self"
+        class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-base px-8 py-3 rounded-full shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+        type="button"
+        style="margin: 1rem; transition: all .15s ease;"
+>
+    <i class="https://static.quantimo.do/img/basic-flat-icons/png/search.png"></i>
+    Search All Variables
+</a>
+<!-- End resources/views/button-pink-rounded.blade.php -->
+                                                </div>
+        </div>
+    </div>
+</div>            </div>
+        </div>
+    </article>
+</main>
+<footer id="footer" class="site-footer">
+    <div class="social-icons">
+                    <a class="social-icon" href="https://quantimo.do">
+                <i class="fas fa-info-circle fa-2x" title="A Better World Through Data"></i>
+            </a>
+                    <a class="social-icon" href="https://docs.quantimo.do">
+                <i class="fas fa-book fa-2x" title="Interactive documentation/playground for the QuantiModo Application Programming Interface (API)"></i>
+            </a>
+                    <a class="social-icon" href="https://builder.quantimo.do">
+                <i class="fas fa-tools fa-2x" title="The App Builder allows anyone to create their own digital health app in minutes without any coding.  Their application can then also be built and released on iOS, Android, and as a Chrome browser extension. "></i>
+            </a>
+                    <a class="social-icon" href="mailto:mike@quantimo.do">
+                <i class="fab fa-facebook-messenger fa-2x" title="Contact Us"></i>
+            </a>
+                    <a class="social-icon" href="https://studies.crowdsourcingcures.org/datalab">
+                <i class="fas fa-calculator fa-2x" title="The DataLab administrative backend provides a powerful tool to create reports, drill down, clean data, monitor progress through the analytical pipeline, and identify issues.  The DataLab also provides easy navigation between dozens of relationships between the various model class via a data graph. "></i>
+            </a>
+                    <a class="social-icon" href="https://help.quantimo.do">
+                <i class="far fa-question-circle fa-2x" title="Get Help"></i>
+            </a>
+                    <a class="social-icon" href="https://github.com/QuantiModo/quantimodo-android-chrome-ios-web-app">
+                <i class="fab fa-github fa-2x" title="A Better World Through Data"></i>
+            </a>
+                    <a class="social-icon" href="https://physician.quantimo.do">
+                <i class="fas fa-medkit fa-2x" title="The physician dashboard allows physicians to view their patients data in addition to regularly emailed reports."></i>
+            </a>
+                    <a class="social-icon" href="https://quantimo.do/privacy">
+                <i class="fas fa-lock fa-2x" title="Privacy Policy"></i>
+            </a>
+                    <a class="social-icon" href="https://studies.quantimo.do">
+                <i class="fas fa-flask fa-2x" title="The Journal of Citizen Science"></i>
+            </a>
+                    <a class="social-icon" href="https://quantimo.do/tos">
+                <i class="fas fa-file-contract fa-2x" title="Terms of Service"></i>
+            </a>
+                    <a class="social-icon" href="https://wordpress.org/plugins/quantimodo">
+                <i class="fab fa-wordpress fa-2x" title="The QuantiModo WordPress Plugin facilitates the democratization of clinical research by allowing anyone to create their own research platform.  It allows users to record, aggregate, analyze and visualize their health and life-tracking data.  The data collection, analysis and visualization functionality may be included in any page or post."></i>
+            </a>
+            </div>
+  <div class="copyright">
+      <p>&copy; 2021
+          <a href="https://crowdsourcingcures.org" rel="nofollow">
+              Crowdsourcing Cures
+          </a>
+      </p>
+  </div>
+</footer>
+<!-- Start of Async Drift Code -->
+<script type="text/javascript">
+    !function() {
+        var t;
+        if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+            t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+            t.factory = function(e) {
+                return function() {
+                    var n;
+                    return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+                };
+            }, t.methods.forEach(function(e) {
+            t[e] = t.factory(e);
+        }), t.load = function(t) {
+            var e, n, o, i;
+            e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+                o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+                n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+        });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('pt53uxxsr2gg');
+</script>
+<!-- End of Async Drift Code --><script src="https://adminlte.io/themes/AdminLTE/bower_components/PACE/pace.min.js"></script>
+<!-- Start resources/views/loggers-js.blade.php -->
+<script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
+<script>if(window.location.href.indexOf("app.quantimo.do") > -1){LogRocket.init('mkcthl/quantimodo');}</script>
+<script type="text/javascript" src="https://d2wy8f7a9ursnm.cloudfront.net/v7/bugsnag.min.js"></script>
+<script type="text/javascript">Bugsnag.start('ae7bc49d1285848342342bb5c321a2cf')</script>
+<script src="https://static.quantimo.do/js/qmLog.js"></script>
+<!-- End resources/views/loggers-js.blade.php -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+</script>
+</body>
+</html>
