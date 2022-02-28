@@ -1,7 +1,18 @@
-# CureDAO Health Reference Data
-Reference databases for the Unified Health API (UHA).  UHA integrates the disparate health data standards in order to accelerate clinical research.
+The health reference data repository is part of our core module **The Unified Health API (UHA)**, which has the main purpose to provide a single storage and query solution for the analysis of health data.
 
-## [Online Data Browser](https://data.crowdsourcingcures.org)
+## Reference Database
+To generate a common language for health data we put all health data references into a single table and call them variables. Pretty much anything quantifying a certain state of a human being could be used as health data and its analysis to find new insights.
+
+The variables are:
+
+- Biomarkers
+- Outcomes
+- Conditions
+- Interventions
+
+![Reference database diagram](diagrams/core_module_architecture.png)
+
+## [Online Data Browser](https://data.curedao.org)
 Contact m@thinkbynumbers.org if you desire access.
 
 ## Reference Data Sources
