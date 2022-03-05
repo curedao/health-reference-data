@@ -12,20 +12,31 @@ The variables are:
 
 ![Reference database diagram](diagrams/core_module_architecture.png)
 
-## [Online Data Browser](https://data.curedao.org)
-Contact m@thinkbynumbers.org if you desire access.
+## Online Data Browser
+
+To browse the references online go to our [Online Reference Browser](https://search.curedao.org)
 
 ## Reference Data Sources
 
 ### [1. Nutritional Supplements](reference-databases/supplements/supplements.md)
 
+
+
 ### [2. Units of Measurement](reference-databases/units/units.md)
+
+[UCUM](https://ucum.org/)
 
 ### [3. Medication](reference-databases/medications/medications.md)
 
+[RXNORM](https://www.nlm.nih.gov/research/umls/rxnorm/index.html)
+
 ### [4. Symptoms and Diseases](reference-databases/diseases/diseases.md)
 
+[ICD-10](https://www.icd-code.de/)
+
 ### [5. Observations, Lab Test Results, and Biomarkers](reference-databases/biomarkers/biomarkers.md)
+
+[LOINC](https://loinc.org/search/)
 
 ### 6. Clinical Trials
 
@@ -46,19 +57,22 @@ Contact m@thinkbynumbers.org if you desire access.
 - [SnomedRfsMySql.zip](https://s3.amazonaws.com/static.quantimo.do/unified-health-api/reference-databases/SnomedRfsMySql.zip)
 - [snomed-release-service-4.4.0.zip](https://s3.amazonaws.com/static.quantimo.do/unified-health-api/reference-databases/snomed-release-service-4.4.0.zip)
 
+### 8.Proteomics
+
+[UniProt](https://www.uniprot.org/)
+
+### 9.Metabolomics
+
+[HMDB](https://hmdb.ca/)
+
+### 10.Genomics
+
+[GENE ONTOLOGY](http://geneontology.org/)
+
 ## Data Schema
 
-### Wearables
-- [Open mHealth](https://www.openmhealth.org/documentation/#/schema-docs/schema-library) - common schemas define the meaningful distinctions for each clinical measure
-- [Apple HealthKit](https://github.com/openmhealth/schemas/tree/develop/schema/granola) - a set of schemas for the Apple HealthKit platform
+Variables table schema
 
-### EHR
-- [FHIR](https://www.hl7.org/fhir/) - a standard for electronic health records
-- [openEHR](https://www.openehr.org/) - openEHR is a technology for e-health consisting of open platform specifications, clinical models and software that together define a domain-driven information systems platform for healthcare and medical research.
 
-## Repository Notes
-
-### [1. Democratic Pull Requests](voting.md)
-
-### 2. Git Large File Storage
+### Git Large File Storage
 This repository requires that you install the [Git Large File Storage plugin](https://git-lfs.github.com/) to store large files in Git.
