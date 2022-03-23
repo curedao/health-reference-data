@@ -1,7 +1,7 @@
 create table variables
 (
     id                                                  int unsigned auto_increment                     primary key,
-    slug_id                                             varchar(80)                                     null comment 'The slug is an identifier in human-readable keywords, used as id for the exchange format',
+    slug                                                varchar(125)                                    null comment 'The slug is an identifier in human-readable keywords, used as id for the exchange format',
     created_at                                          timestamp   default CURRENT_TIMESTAMP           not null,
     updated_at                                          timestamp   default CURRENT_TIMESTAMP           not null on update CURRENT_TIMESTAMP,
     name_short                                          varchar(20)                                     not null comment 'Variable common abbreviation',
@@ -14,6 +14,9 @@ create table variables
     synonyms                                            varchar(600)                                    null comment 'The primary variable name and any synonyms for it. This field should be used for non-specific variable searches.',
     ranges                                              text                                            null comment 'ranges in serialized JSON format acc. to ranges-protocol',
     references                                          varchar(2083)[]                                 null comment 'URLs the websites related to the definition, source or more information to this entry',
+    additional_meta_data                                text                                            null,
+    canonical_variable_id                               int unsigned                                    null comment 'If a variable duplicates another but with a different name, set the canonical variable id to match the variable with the more appropriate name.  Then only the canonical variable will be displayed and all data for the duplicate variable will be included when fetching data for the canonical variable. Approved where canonical_id = id',
+
 
 /* Cross references to reference databases */
     loinc
@@ -34,6 +37,15 @@ create table variables
 /* Outcomes specific */
 
 /* Conditions specific */
+    
+/* Property Analysis */
+    analysis_settings_modified_at                       timestamp                                       null,
+    analysis_requested_at                               timestamp                                       null,
+    analysis_started_at                                 timestamp                                       null,
+    analysis_ended_at                                   timestamp                                       null,   
+    average_seconds_between_measurements                int                                             null,
+    
+    
 
     cause_only                                          tinyint(1)                                      null comment 'A value of 1 indicates that this variable is generally a cause in a causal relationship.  An example of a causeOnly variable would be a variable such as Cloud Cover which would generally not be influenced by the behaviour of the user',
     combination_operation                               enum ('SUM', 'MEAN')                            null comment 'How to combine values of this variable (for instance, to see a summary of the values over a month) SUM or MEAN',
