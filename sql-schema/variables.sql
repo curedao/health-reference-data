@@ -21,6 +21,10 @@ create table variables
     snomed
     meddra
     icd10
+    uniprot
+    hmdb
+    gene_ontology
+    aact
 
 /* Biomarkers specific */
 
