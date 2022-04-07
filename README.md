@@ -56,7 +56,7 @@ Contact m@thinkbynumbers.org if you desire access.
 
 ### [9. Nutrition](reference-databases/nutrition/nutrition.md)
 
-### [10. Unstandardized Additions](reference-databases/additional/additional.md)
+### [10. Unstandardized Additions](reference-databases/additions/additions.md)
 
 
 ## Variables Data Schema
