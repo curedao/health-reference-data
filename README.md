@@ -48,13 +48,13 @@ Contact m@thinkbynumbers.org if you desire access.
 
 ### [5. Observations, Lab Test Results, and Biomarkers](reference-databases/biomarkers/biomarkers.md)
 
-### [6. Clinical Trials](reference-databases/biomarkers/clinical-trials.md)
+### [6. Clinical Trials](reference-databases/clinical-trials/clinical-trials.md)
 
-### [7. Medical Codes, Terms, and Synonyms](reference-databases/biomarkers/medical-codes-terms-synonyms.md)
+### [7. Medical Codes, Terms, and Synonyms](reference-databases/medical-codes-terms-synonyms/medical-codes-terms-synonyms.md)
 
 ### [8. Wearables](reference-databases/biomarkers/wearables.md)
 
-### [9. Nutrition](reference-databases/nutrition/nutrition.md)
+### [9. Nutrition](reference-databases/foods/foods.md)
 
 ### [10. Unstandardized Additions](reference-databases/additions/additions.md)
 
