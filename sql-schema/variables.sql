@@ -3,7 +3,7 @@
 CREATE TABLE `cd_variables` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Meaningless auto assigned integer for relating to other data. ',
   `name` varchar(125) NOT NULL COMMENT '[Admin-Setting] A consumer friendly name for this item. The intent is to provide a test name that health care consumers will recognize.',
-  `abbreviated_name` varchar(100) DEFAULT NULL COMMENT '[Admin-Setting] Canonical shorter version of the name or scientific abbrevation',
+  `abbreviated_name` varchar(100) DEFAULT NULL COMMENT '[Admin-Setting] Canonical shorter version of the name or scientific abbreviation',
   `additional_meta_data` text COMMENT '[] JSON-encoded additional data that does not fit in any other columns. JSON object',
   `analysis_ended_at` timestamp NULL DEFAULT NULL COMMENT '[Internal] When last analysis was completed.',
   `analysis_requested_at` timestamp NULL DEFAULT NULL COMMENT '[Internal] When an analysis was manually triggered.',
