@@ -16,7 +16,7 @@ blood_globulin,10834-0,"Globulin, Total",g/dL,Globulin,https://www.labcorp.com/t
 blood_albumin_globulin_ratio,1759-0,A/G Ratio,{ratio},Albumin:Globulin (A:G) ratio,https://www.labcorp.com/tests/322000/metabolic-panel-14-comprehensive,ALBUMIN/GLOBULIN RATIO,,,,
 blood_bilirubin,1975-2,"Bilirubin, Total",mg/dL,Bilirubin,https://www.labcorp.com/tests/322000/metabolic-panel-14-comprehensive,,,,,
 blood_alkaline_phosphatase,6768-6,Alkaline Phosphatase,IU/L,"Alkaline phosphatase, Serum",https://www.labcorp.com/tests/322000/metabolic-panel-14-comprehensive,,,,,
-blood_aspartate_Aminotransferase,1920-8,AST (SGOT),IU/L,Aspartate Aminotransferase (AST/SGOT),,AST,,,,
+blood_aspartate_aminotransferase,1920-8,AST (SGOT),IU/L,Aspartate Aminotransferase (AST/SGOT),,AST,,,,
 blood_alanine_aminotransferase,1742-6,ALT (SGPT),IU/L,Alanine aminotransferase,,Alanine aminotransferase (ALT/SGPT),ALT,,,
 blood_glomerular_filtration_rate_non_afr,88294-4,eGFR If NonAfricn Am,mL/min/1.73,eGFR calculation If NonAfricn Am,,Glomerular filtration rate among non-blacks,eGFR NON-AFR. AMERICAN,,,
 blood_glomerular_filtration_rate_afr,88293-6,eGFR If Africn Am,mL/min/1.73,eGFR calculation If Africn Am,,Glomerular filtration rate among blacks,eGFR AFRICAN AMERICAN,,,
