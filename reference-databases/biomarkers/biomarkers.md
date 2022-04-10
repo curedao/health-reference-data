@@ -26,3 +26,8 @@ The UniProt Consortium - the universal protein knowledgebase in 2021
 [THE GENE ONTOLOGY RESOURCE](http://geneontology.org/)
 The mission of the GO Consortium is to develop a comprehensive, computational model of biological systems, ranging from the molecular to the organism level, across the multiplicity of species in the tree of life.
 The Gene Ontology (GO) knowledgebase is the world’s largest source of information on the functions of genes. This knowledge is both human-readable and machine-readable, and is a foundation for computational analysis of large-scale molecular biology and genetics experiments in biomedical research.
+
+## Exposome
+
+[Exposome-Explorer](http://exposome-explorer.iarc.fr/downloads)
+First database dedicated to biomarkers of exposure to environmental risk factors for diseases.
