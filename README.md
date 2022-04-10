@@ -36,6 +36,12 @@ To browse the references in a comprehensive database visit [Reference Browser Da
 
 Contact m@thinkbynumbers.org if you desire access.
 
+## Contribution
+
+We encourage the community to help build out the additions to use existing and non-existing standards for the purpose of more effective health data analysis and to fill missing gaps for e.g. new biomarkers.
+
+The process is currently in the making, please join our Discord to learn more. (see repo description)
+
 ## Reference Data Sources
 
 ### [1. Units of Measurement](reference-databases/units/units.md)
@@ -56,7 +62,7 @@ Contact m@thinkbynumbers.org if you desire access.
 
 ### [9. Nutrition](reference-databases/foods/foods.md)
 
-### [10. Unstandardized Additions](reference-databases/additions/additions.md)
+### [10. Additions](reference-databases/additions/additions.md)
 
 
 ## Variables Data Schema
