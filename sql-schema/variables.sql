@@ -135,7 +135,7 @@ CREATE TABLE `cd_variables` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '[]',
   `user_error_message` text COMMENT '[]',
   `valence` enum('positive','negative','neutral') DEFAULT NULL COMMENT '[]',
-  `variable_category_id` tinyint(3) unsigned NOT NULL COMMENT 'Variable category ID',
+  `tags` varchar(600) DEFAULT NULL COMMENT '[Reference] Tags for categorization in multiple levels/ontologies/types/subtypes e.g. Condition, Intervention, Biomarker and going deeper the ontology level: Laboratory test, Blood test, Lipid panel, or for logical grouping e.g. Risk scores, Hormones, Medical use',
   `variance` double DEFAULT NULL COMMENT 'Variance',
   `version_first_released` varchar(255) DEFAULT NULL COMMENT 'The CureDAO version number in which the record was first released. For oldest records where the version released number is known, this field will be null.',
   `version_last_changed` varchar(255) DEFAULT NULL COMMENT 'The CureDAO version number in which the record has last changed. For records that have never been updated after their release, this field will contain the same value as the loinc.VersionFirstReleased field.',
