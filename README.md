@@ -21,6 +21,8 @@ The variables are:
 
 ![Reference database diagram](diagrams/core_module_architecture.png)
 
+## [DB Schema Repository](https://github.com/curedao/curedao-db-schema)
+
 ### How it works
 
 Using **The Unified Health API (UHA)** imported data points will be mapped to a measurement schema, which pulls the reference information from this reference database to validate measurement values and to tag the data with the common identifiers.
@@ -38,13 +40,13 @@ To browse the references online go to our [Online Reference Browser](https://sea
 
 To browse the references in a comprehensive database visit [Reference Browser Database](https://data.curedao.org/)
 
-Contact m@thinkbynumbers.org if you desire access.
+Contact m@curedao.org if you desire access.
 
 ## Contribution
 
 We encourage the community to help build out the additions to use existing and non-existing standards for the purpose of more effective health data analysis and to fill missing gaps for e.g. new biomarkers.
 
-The process is currently in the making, please join our Discord to learn more. (see repo description)
+The process is currently in the making, please join our [Discord](https://curedao.org/discord) to learn more. 
 
 ## Reference Data Sources
 
